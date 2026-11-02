@@ -90,3 +90,52 @@ main {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 10px;
 }
+
+#contenedorDeColores:has(> :nth-child(8):last-child) {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+#contenedorDeColores:has(> :nth-child(9):last-child) {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.tarjetaColor {
+    height: 185px;
+    min-width: 0;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.botonBloquear {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.botonBloquear:hover {
+    background-color: #f0ecff;
+}
+
+.etiquetaColor {
+    background: white;
+    color: #111111;
+    padding: 8px 9px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 100%;
+    min-width: 0;
+}

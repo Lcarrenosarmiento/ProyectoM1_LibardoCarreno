@@ -148,18 +148,18 @@ function generarPaleta() {
         if (colores[i] && colores[i].bloqueado) {
             nuevaPaleta.push(colores[i]);
         } else {
-            nuevaPaleta.push(crearColor());
-        }
+            nuevaPaleta.push(crearColor()); 
+        }       
     }
 
     colores = nuevaPaleta;
     mensajeEstado.textContent = "";
     mostrarPaleta();
-    mensajeEstado.textContent = "¡Paleta creada con éxito!";
+    mensajeEstado.textContent = "¡paleta creada con èxito!";
 
-    setTimeout(function () {
-    mensajeEstado.textContent = "";
-    }, 3000);
+        setTimeout(function () {
+        mensajeEstado.textContent = "";
+        }, 3000);
 }
 
 selectorCantidad.addEventListener("change", generarPaleta);
