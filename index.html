@@ -8,37 +8,42 @@
     
 </head>
   
-<body>
-    <header>
-        <h1>Generador de paletas</h1>
-    </header>
-   
+    <body>
     <main>
+        <section class="seccionPaleta">
+            <header>
+                <h1>Colorfly Studio</h1> 
+            </header>
+                <h2>Tu paleta de colores</h2>
+                <p>Explora, combina y descubre colores para tus proyectos.</p>
 
-        <section>
-           
-             <label for="cantidadDeColores">Cantidad de colores:</label>
-             <select id="cantidadDeColores">
-                <option value="6">6</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-             </select>
-             <button id="generadorDeColores" type="button" class="botonPrincipal">Generar paleta</button>
-        </section>
+                <div class="controlesPaleta">
+                    <label for="cantidadDeColores">Cantidad de colores:</label>
+                    <select id="cantidadDeColores">
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <label for="formatoColor">Formato:</label>
+                    <select id="formatoColor">
+                        <option value="hsl">HSL</option>
+                        <option value="hex">HEX (Hexadecimal)</option>
+                    </select>
 
-        <section>
-           <h2>Tu paleta de colores</h2>
-            <div id="contenedorDeColores">
-        
+                    <button id="generadorDeColores" type="button" class="botonPrincipal">Generar paleta</button>
+                </div>
+             
+                <div id="contenedorDeColores" aria-label="Colores de la paleta"></div>
 
-            </div>
-            
+                <p id="mensajeEstado" class="mensajeEstado"
+                       role="status" aria-live="polite"></p> 
         </section>
     </main>
 
-    <footer>
-        
+    <footer class="piePagina">
+        <p>Colorfly Studio · Crea y explora tus colores</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

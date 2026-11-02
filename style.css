@@ -1,7 +1,92 @@
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    font-family: arial, sans-serif;
+    color: #24243e;
+    background-color: #f7f4ff;
+    background-image: 
+        radial-gradient(circle at 10% 15%, #dcd4ff 0%, transparent 35%),
+        radial-gradient(circle at 90% 80%, #ffd8ed 0%, transparent 35%),
+        linear-gradient(135deg, #f7f4ff, #eef6ff);
+    background-attachment: fixed;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+}
+
+.seccionPaleta {
+    max-width: 1500px;
+    margin: 25px auto 0;
+    padding: 30px 24px;
+    text-align: center;
+}
+
+.seccionPaleta h1 {
+    font-size: 42px;
+    color: #6b4eff;
+    margin: 0 0 28px;
+}
+
+.seccionPaleta h2 {
+    font-size: 30px;
+    margin: 0 0 20px;
+}
+
+.seccionPaleta > p:not(.mensajeEstado) {
+    color: #66667a;
+    font-size: 16px;
+    margin: 0 0 30px;
+}
+
+.controlesPaleta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto 55px;
+    padding: 10px;
+}
+
+.controlesPaleta label {
+    font-size: 14px;
+}
+
+.controlesPaleta select {
+    padding: 10px 12px;
+    border: 1px solid #d5d0eb;
+    border-radius: 8px;
+    background: white;
+    color: #24243e;
+    font-size: 14px;
+    cursor: pointer;
+}
+
 .botonPrincipal {
     background-color: #6b4eff;
     color: white;
-    padding: 10px 20px;
+    padding: 11px 20px;
+    border: none;
     border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botonPrincipal:hover {
+    background-color: #5639e0;
+}
+
+#contenedorDeColores {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 10px;
 }
