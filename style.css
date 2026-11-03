@@ -139,3 +139,89 @@ main {
     max-width: 100%;
     min-width: 0;
 }
+
+.etiquetaColor h3,
+.etiquetaColor p {
+    margin: 0;
+}
+
+.etiquetaColor h3 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.etiquetaColor p {
+    font-size: 11px;
+    overflow-wrap: anywhere;
+    margin-bottom: 7px;
+}
+
+.botonCopiar {
+    background: #f6f4ff;
+    color: #24243e;
+    border: 1px solid #ded8ff;
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.botonCopiar:hover {
+    background-color: #f0ecff;
+}
+
+.mensajeEstado {
+    min-height: 20px;
+    margin: 15px 0 0;
+    font-size: 13px;
+    color: #4f3db2;
+}
+
+.piePagina {
+    width: 100%;
+    padding: 20px 15px;
+    text-align: center;
+    color: #66667a;
+    font-size: 13px;
+}
+
+.piePagina p {
+    margin: 0;
+}
+
+@media (max-width: 1000px) {
+    #contenedorDeColores,
+    #contenedorDeColores:has(> :nth-child(8):last-child),
+    #contenedorDeColores:has(> :nth-child(9):last-child) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .seccionPaleta {
+        padding: 20px 15px;
+    }
+
+    .seccionPaleta h1 {
+        font-size: 32px;
+    }
+
+    .seccionPaleta h2 {
+        font-size: 24px;
+    }
+
+    #contenedorDeColores,
+    #contenedorDeColores:has(> :nth-child(8):last-child),
+    #contenedorDeColores:has(> :nth-child(9):last-child) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.mensajeEstado {
+    text-align: center;
+    color: #6b4eff;
+    font-size: 14px;
+    margin-top: 20px;
+}
