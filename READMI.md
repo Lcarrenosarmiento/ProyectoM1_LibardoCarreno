@@ -6,7 +6,7 @@ Colorfly Studio es una aplicación web que permite generar paletas de colores al
 
 El proyecto fue desarrollado utilizando HTML, CSS y JavaScript, con el objetivo de poner en práctica los conocimientos adquiridos durante el aprendizaje de desarrollo web.
 
-La aplicación permite generar diferentes combinaciones de colores, consultar sus códigos, bloquear los colores que se quieran conservar y recuperar paletas generadas anteriormente.
+La aplicación permite generar diferentes combinaciones de colores, consultar sus códigos, bloquear los colores que se quieran conservar, copiar colores individuales o paletas completas y recuperar paletas generadas anteriormente.
 
 ## Tecnologías utilizadas
 
@@ -33,11 +33,17 @@ Cada tarjeta tiene un botón con un candado que permite bloquear o desbloquear u
 
 Cuando un color está bloqueado, se conserva en su posición al generar una nueva paleta, mientras los demás colores cambian.
 
-### Copiar colores
+### Copiar colores individuales
 
 Al hacer clic sobre una tarjeta o en el botón **Copiar**, se copia el código HEX del color al portapapeles.
 
 La aplicación muestra un mensaje para indicar si el código se copió correctamente.
+
+### Copiar paleta completa
+
+La aplicación cuenta con un botón llamado **Copiar paleta completa**, que permite copiar todos los códigos HEX de la paleta actual con un solo clic.
+
+Los códigos se copian en forma de lista, uno debajo del otro, para poder utilizarlos en otros proyectos o documentos.
 
 ### Historial de paletas
 
@@ -66,52 +72,8 @@ El diseño se adapta a diferentes tamaños de pantalla, como computadores, table
 3. Elegir el formato en el que se quieren visualizar los códigos: HEX o HSL.
 4. Presionar el botón **Generar paleta**.
 5. Bloquear con el candado los colores que se quieran conservar.
-6. Hacer clic sobre una tarjeta o en el botón **Copiar** para copiar el código hexadecimal.
-7. Utilizar el historial para recuperar alguna de las últimas paletas generadas.
+6. Hacer clic sobre una tarjeta o en el botón **Copiar
 
-## Estructura del proyecto
-
-El proyecto está organizado en tres archivos principales:
-
-```text
-Colorfly-Studio/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
-
-- `index.html`: contiene la estructura de la aplicación.
-- `style.css`: contiene los estilos, colores, tamaños y distribución de los elementos.
-- `script.js`: contiene las funciones que permiten generar, mostrar, bloquear, copiar y guardar los colores.
-- `README.md`: contiene la descripción y las instrucciones del proyecto.
-
-## Cómo ejecutar el proyecto
-
-1. Descargar o clonar el repositorio desde GitHub.
-2. Abrir la carpeta del proyecto en Visual Studio Code.
-3. Abrir el archivo `index.html` utilizando Live Server.
-4. La aplicación se abrirá en el navegador y estará lista para utilizarse.
-
-Se recomienda utilizar Live Server para que la función de copiar colores al portapapeles funcione correctamente.
-
-## Cómo publicar el proyecto en GitHub Pages
-
-1. Crear un repositorio en GitHub.
-2. Subir los archivos del proyecto al repositorio.
-3. Entrar a **Settings** y seleccionar **Pages**.
-4. En **Build and deployment**, seleccionar **Deploy from a branch**.
-5. Elegir la rama `main` y la carpeta `/ (root)`.
-6. Hacer clic en **Save**.
-7. Esperar a que GitHub Pages publique el proyecto y genere el enlace de la página.
-
-Una vez publicado, el proyecto puede utilizarse desde un navegador sin necesidad de instalar programas.
-
-## Objetivo de aprendizaje
-
-Con este proyecto se ponen en práctica conceptos básicos de programación y desarrollo web, como el uso de variables, funciones, condicionales, ciclos, arreglos y eventos en JavaScript.
-
-También se trabaja con la manipulación de elementos HTML desde JavaScript, el uso de CSS Grid para organizar los colores y el almacenamiento de información mediante localStorage.
 
 ## Autor
 

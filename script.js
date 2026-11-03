@@ -4,6 +4,7 @@ const selectorCantidad = document.getElementById("cantidadDeColores");
 const selectorFormato = document.getElementById("formatoColor");
 const botonGenerar = document.getElementById("generadorDeColores");
 const mensajeEstado = document.getElementById("mensajeEstado");
+const botonCopiarPaleta = document.getElementById("copiarPaleta");
 
 let colores = [];
 let historial = [];
@@ -87,6 +88,21 @@ async function copiarColor(hex) {
         mensajeEstado.textContent = "Código copiado: " + hex;
     } catch (error) {
         mensajeEstado.textContent = "No se pudo copiar. Abre la página en localhost o HTTPS.";
+    }
+}
+
+async function copiarPaletaCompleta() {
+    let codigos = "";
+
+    for (let i = 0; i < colores.length; i++) {
+        codigos += colores[i].hex + "\n";
+    }
+
+    try {
+        await navigator.clipboard.writeText(codigos);
+        mensajeEstado.textContent = "¡Paleta completa copiada!";
+    } catch (error) {
+        mensajeEstado.textContent = "No se pudo copiar la paleta.";
     }
 }
 
@@ -330,6 +346,7 @@ selectorFormato.addEventListener("change", function () {
     mostrarPaleta();
 });
 botonGenerar.addEventListener("click", generarPaleta);
+botonCopiarPaleta.addEventListener("click", copiarPaletaCompleta);
 
 // Iniciar
 cargarPaleta();
