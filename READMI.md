@@ -74,6 +74,15 @@ El diseño se adapta a diferentes tamaños de pantalla, como computadores, table
 5. Bloquear con el candado los colores que se quieran conservar.
 6. Hacer clic sobre una tarjeta o en el botón **Copiar
 
+## Uso de inteligencia artificial
+
+Durante el desarrollo de Colorfly Studio utilicé herramientas de inteligencia artificial como ChatGPT y Gemini para resolver dudas, comprender conceptos de programación y encontrar alternativas para implementar diferentes funcionalidades.
+
+Estas herramientas fueron utilizadas como apoyo durante mi proceso de aprendizaje de HTML, CSS y JavaScript.
+
+Documenté las principales consultas realizadas, cómo me ayudaron y de qué manera apliqué los conocimientos adquiridos en el proyecto, incluyendo capturas de pantalla como evidencia.
+
+**[Ver documentación y evidencias del uso de IA](USO_IA.md)**
 
 ## Autor
 
