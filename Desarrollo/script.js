@@ -95,16 +95,17 @@ async function copiarPaletaCompleta() {
     let codigos = "";
 
     for (let i = 0; i < colores.length; i++) {
-        codigos += colores[i].hex + "\n";
+        codigos += obtenerCodigo(colores[i]) + "\n";
     }
 
     try {
         await navigator.clipboard.writeText(codigos);
-        mensajeEstado.textContent = "¡Paleta completa copiada!";
+        mensajeEstado.textContent = "¡Paleta completa copiada en " + selectorFormato.value + "!";
     } catch (error) {
         mensajeEstado.textContent = "No se pudo copiar la paleta.";
     }
 }
+
 
 // Mostrar la paleta
 function mostrarPaleta(animar = false) {
@@ -198,12 +199,12 @@ function mostrarPaleta(animar = false) {
 
         botonCopiar.addEventListener("click", function (evento) {
             evento.stopPropagation();
-            copiarColor(color.hex);
+            copiarColor(obtenerCodigo(color));
         });
 
         // Copiar al hacer clic en la tarjeta
         tarjeta.addEventListener("click", function () {
-            copiarColor(color.hex);
+            copiarColor(obtenerCodigo(color));
         });
 
         etiqueta.appendChild(titulo);
